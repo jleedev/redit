@@ -7,13 +7,13 @@ with an awareness of how we want our editor to behave but mostly
 disregarding the implementation details of Vim, Emacs, or anything else
 currently used to edit text.
 
-It seems reasonable to recapitulate the development of the text editor
-in general in our own development process; thus, we expect to progress
-from a line editor to a visual-mode editor to a GUI editor, using our
-work at each stage to bootstrap the next.
+One strategy for building a text editor is to recapitulate the evolution
+of text editors in miniature---that is, build from a line editor to a
+visual editor to a GUI editor to a semantic object-aware editor. This
+gets enterprisey very quickly.
 
-Our design is probably going to consist of looping on input, and then
-executing commands. We're going to build extensibility into this,
-allowing plugins and what-have-you to specify their own commands and
-possibly strap themselves to existing commands. It's going to be pretty
-sweet.
+We are going to take a slightly different tack: roughly, we will grow in
+two dimensions, progressing in the direction of usability and visual
+fluency on the one hand and in the direction of object-awareness on the
+other. The resulting program should then be beautiful, usable, and
+powerful, or else incomplete.
