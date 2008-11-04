@@ -1,0 +1,19 @@
+We are a couple of Vim hackers who have never quite managed to acclimate
+ourselves to Emacs, and who, like most, have developed a distaste for
+Vim script.
+
+Our general strategy here is going to be to start mostly from scratch,
+with an awareness of how we want our editor to behave but mostly
+disregarding the implementation details of Vim, Emacs, or anything else
+currently used to edit text.
+
+It seems reasonable to recapitulate the development of the text editor
+in general in our own development process; thus, we expect to progress
+from a line editor to a visual-mode editor to a GUI editor, using our
+work at each stage to bootstrap the next.
+
+Our design is probably going to consist of looping on input, and then
+executing commands. We're going to build extensibility into this,
+allowing plugins and what-have-you to specify their own commands and
+possibly strap themselves to existing commands. It's going to be pretty
+sweet.
