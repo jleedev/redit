@@ -1,5 +1,3 @@
-require 'redit/chunk'
-
 module Redit
 
     VERSION = '0.0.0'
