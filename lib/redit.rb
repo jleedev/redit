@@ -10,6 +10,10 @@ class Redit
         puts "Redit go!"
     end
 
+    def start
+        puts "Now we're cooking."
+    end
+
 end
 
 end
