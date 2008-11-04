@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-while true do
-    # get user input
-    # execute commands based on input
-end
+require 'redit'
+
+$redit = Redit::Redit.new( ARGV )
+$redit.start
