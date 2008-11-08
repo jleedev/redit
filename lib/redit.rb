@@ -1,6 +1,7 @@
 module Redit
 
     VERSION = '0.0.0'
+    PROGRAM_NAME = 'redit'
 
 class Redit
 
