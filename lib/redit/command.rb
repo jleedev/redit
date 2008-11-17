@@ -4,11 +4,11 @@ module Redit
 
 class Command
 
-    def i str
+    def i( str )
         puts str
     end
 
-    def q str
+    def q( str )
         true
     end
 

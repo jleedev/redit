@@ -19,7 +19,7 @@ class Redit
         end
     end
 
-    def process str
+    def process( str )
         /^([0-9])*(#{CMD_REGEX})(.*)$/.match str
         cmd,args = $2,$3
         count = ($1 or 1).to_i
