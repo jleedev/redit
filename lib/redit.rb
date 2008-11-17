@@ -12,10 +12,19 @@ class Redit
     end
 
     def start
-        exiting = false
-        while ! exiting do
+        @exiting = false
+        while ! @exiting do
             buf = gets
-            exiting = @command.process buf
+            self.process buf
+        end
+    end
+
+    def process str
+        /^([0-9])*(#{CMD_REGEX})(.*)$/.match str
+        cmd,args = $2,$3
+        count = ($1 or 1).to_i
+        count.times do
+            @exiting = @command.send cmd, args
         end
     end
 

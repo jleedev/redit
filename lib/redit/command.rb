@@ -4,13 +4,6 @@ module Redit
 
 class Command
 
-    def process str
-        /^(#{CMD_REGEX})(.*)$/.match(str)
-        cmd = $1
-        args = $2
-        self.send $1, $2
-    end
-
     def i str
         puts str
     end
