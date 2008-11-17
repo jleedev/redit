@@ -1,4 +1,5 @@
 require 'redit/buffer'
+require 'redit/command'
 
 module Redit
 
@@ -13,7 +14,20 @@ class Editor
     attr_reader :buffer
 
     def initialize( buf = nil )
-        @buffer = buf or Buffer.new
+        @buffer = buf || Buffer.new
+    end
+
+    def process( str )
+        ret = nil
+        count,cmd,rest = Command.parse str
+        if cmd.nil?
+            puts '?'
+        else
+            count.times do
+                ret = @buffer.send cmd, rest
+            end
+        end
+        ret
     end
 
 end

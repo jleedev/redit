@@ -1,4 +1,4 @@
-require 'redit/command'
+require 'redit/editor'
 
 module Redit
 
@@ -8,28 +8,14 @@ module Redit
 class Redit
 
     def initialize( argv = [] )
-        @command = Command.new
+        @editor = Editor.new
     end
 
     def start
         @exiting = false
         while ! @exiting do
             buf = gets
-            self.process buf
-        end
-    end
-
-    def process( str )
-        /^([0-9])*(#{CMD_REGEX})(.*)$/.match str
-        cmd,args = $2,$3
-        count = ($1 or 1).to_i
-
-        if cmd.nil?
-            puts '?'
-        else
-            count.times do
-                @exiting = @command.send cmd, args
-            end
+            @exiting = @editor.process buf
         end
     end
 
