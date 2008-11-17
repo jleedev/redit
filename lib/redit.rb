@@ -24,7 +24,7 @@ class Redit
         cmd,args = $2,$3
         count = ($1 or 1).to_i
         count.times do
-            @exiting = @command.send cmd, args
+            @exiting = @command.send cmd, args unless cmd.nil?
         end
     end
 
