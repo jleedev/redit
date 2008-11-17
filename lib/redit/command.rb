@@ -8,7 +8,7 @@ class Command
         /^(#{CMD_REGEX})(.*)$/.match(str)
         cmd = $1
         args = $2
-        self.send $1, $2
+        self.send $1, $2 unless cmd.nil?
     end
 
     def i str
