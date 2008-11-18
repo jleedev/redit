@@ -20,7 +20,7 @@ module Redit
 
     command :a
 
-    def [] args
+    def self.[] args
       puts "Appending ur #{args.inspect}!"
     end
 
