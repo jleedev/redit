@@ -6,7 +6,7 @@ module Redit
 
     class << self
       def command sym
-        (@@table[c] ||= []) << self
+        (@@table[sym] ||= []) << self
       end
     end
 
