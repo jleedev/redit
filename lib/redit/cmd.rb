@@ -5,8 +5,7 @@ class Cmd
 
     class << self
         def command sym
-            @@table[c] ||= []
-            @@table[c] << self
+            @@table[c] ||= [] << self
         end
     end
 
