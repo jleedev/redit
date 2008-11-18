@@ -1,24 +1,29 @@
 module Redit
 
-class Cmd
+  class Cmd
+
     @@table = {}
 
     class << self
-        def command sym
-            @@table[c] ||= [] << self
-        end
+      def command sym
+        @@table[c] ||= [] << self
+      end
     end
 
     def self.[] cmd,args
-        @@table[cmd].each {|cls| cls[args]}
+      @@table[cmd].each {|cls| cls[args]}
     end
-end
 
-class Append < Cmd
+  end
+
+  class Append < Cmd
+
     command :a
+
     def [] args
-        puts "Appending ur #{args.inspect}!"
+      puts "Appending ur #{args.inspect}!"
     end
-end
+
+  end
 
 end
