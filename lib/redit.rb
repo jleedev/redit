@@ -6,7 +6,6 @@ module Redit
   PROGRAM_NAME = 'redit'
 
   class Redit
-
     def initialize( argv = [] )
       @editor = Editor.new
     end

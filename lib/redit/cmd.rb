@@ -1,13 +1,14 @@
 module Redit
 
   class Cmd
-
     @@table = {}
 
     class << self
+
       def command sym
         @@table[sym] ||= [] << self
       end
+
     end
 
     def self.[] cmd,args
@@ -16,8 +17,8 @@ module Redit
 
   end
 
-  class Append < Cmd
 
+  class Append < Cmd
     command :a
 
     def self.[] args
