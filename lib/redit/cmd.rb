@@ -27,4 +27,8 @@ module Redit
 
   end
 
+  if __FILE__ == $0
+    Cmd[:a,"foo"]
+  end
+
 end
