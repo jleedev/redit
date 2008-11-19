@@ -9,25 +9,11 @@ module Redit
 
     def initialize( name = nil )
       @buffer_name = name
-      @contents = ""
-    end
-
-    def append( str )
-      @contents += str
+      @contents = [""]
     end
 
     def close
       # Useful once we start actually saving files.
-    end
-
-    # XXX handle commands better
-
-    def i( str )
-      puts str
-    end
-
-    def q( _=nil )
-      true
     end
 
   end
