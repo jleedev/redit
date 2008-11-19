@@ -1,5 +1,7 @@
 module Redit
 
+  # A representation of an editor command. Redit can be extended by
+  # subclassing and manipulating this class.
   class Cmd
     @@table = {}
 
